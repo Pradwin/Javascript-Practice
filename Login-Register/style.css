@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+header{
+    position:fixed;
+    top: 0;
+    background-color: blue;
+    width: 100%;
+    height: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0px 20px 0px 20px;
+
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    margin: 0px 20px;
+    padding: 2px 15px;
+    border-bottom: 2px solid transparent;
+    transition: 0.25 ease-in-out;
+}
+nav a:hover{
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transition: 0.25 ease-in-out;
+}
+.wrapper{
+    position: relative;
+    width: 400px;
+    height:440px;
+    background-color: red;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition:height .2s ease ;
+    transform: scale(0);
+}
+.wrapper.active{
+    height: 520px;
+}
+.wrapper.active-popup{
+transform:scale(1);
+}
+.wrapper.active .form-box.login{
+    transition: none;
+    transform:translateX(-400px);
+}
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+.wrapper.form-box.login{
+    transition: transform .18s ease-in-out;
+    transform:translateX(0);
+}
+.wrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+.wrapper.active .form-box.register{
+    transition: transform .18s ease-in-out;
+    transform: translateX(0);
+}
+.wrapper h2{
+    text-align: center;
+    font-size: 2rem;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom:2px solid #162938;
+    margin:30px 0
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform:translateY(-50%);
+    pointer-events: none;
+    transition: 0.5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 35px 0 5px;
+}
+.remember-forget{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+.remember-forget label input{
+margin: 5px 0px;
+}
+.btn{
+    width:100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.login-register{
+    text-align: center;
+    margin:25px 0 15px
+}
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: rgb(64, 64, 111);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+}
