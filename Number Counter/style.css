@@ -1,0 +1,97 @@
+:root {
+    --primary-color: #19172e;
+    --counter-container-size: 9.375rem;
+    --container-width: 100%;
+    --btn-operator-size: 2.5rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:crimson;
+    color: white;
+    position: relative;
+    min-height: 95vh;
+    padding-bottom:5rem;
+}
+button{
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.heading{
+    font-size: 2rem;
+    margin:2rem auto;
+    width: max-content;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.number-counter, .number-saved{
+    width: 100%;
+}
+.counter-container {
+width: 9.375rem;
+height: 9.375rem;
+margin:1rem auto;
+background-color: blue;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+position: relative;
+border-radius: 1rem;
+}
+.counter{
+    font-size: 4rem;
+}
+.btn-operator {
+    width: var(--btn-operator-size);
+    height: var(--btn-operator-size);
+    position: absolute;
+    font-size: 1.2em;
+    background: white;
+    color: rgb(34, 34, 34);
+    border-radius: 3.125rem;
+}
+
+.increase {
+    bottom: 10%;
+    right: -15%;
+}
+
+.decrease {
+    bottom: -15%;
+    right: 10%;
+}
+
+.btn {
+    display: block;
+    background: #333333;
+    padding: 1.25rem;
+    margin: 2.5rem auto;
+    width: fit-content;
+    border-radius: 8px;
+}
+
+.btn:active {
+    background: rgb(30, 142, 62);
+}
+
+.number {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.num {
+    color: white;
+    margin: 0.625rem;
+    font-size: 1.125rem;
+    align-self: center;
+}
