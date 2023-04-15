@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            margin-top: 100px;
+            background-color: rgb(51, 35, 203);
+            padding:60px;
+            border-radius: 20px;
+            color: aliceblue;
+        }
+        .btn{
+             margin:10px 0 10px 96px;
+        }
+        h4{
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Body Mass Index Calculator</h2>
+    <h2>Your Height: <input type="number" id="cm" placeholder="Centimeters"></h2>
+    <br>
+    <h2>Your Weight: <input type="number" id="kg" placeholder="Kilograms"></h2>
+    <br>
+    <button class="btn" onclick="fun()">Compute BMI</button>
+    <br>
+    Your BMI: <input type="text" id="BMI">
+    
+    <h4></h4>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
